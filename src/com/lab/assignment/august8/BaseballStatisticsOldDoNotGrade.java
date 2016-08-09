@@ -3,7 +3,7 @@ package com.lab.assignment.august8;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class BaseballStatistics {
+public class BaseballStatisticsOldDoNotGrade {
 	
 		public static Scanner sc = new Scanner(System.in);
 		private static boolean stillComputing = true;
