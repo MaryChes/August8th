@@ -62,6 +62,10 @@ public class BattingStatisticsExplorer
 							{
 								throw new Exception("greaterThanFour");
 							}
+							if (Float.parseFloat(numberOfBases) < 0)
+							{
+								throw new Exception("lessThanZero");
+							}
 							float numberOfAtBasesAsFloat = Float.parseFloat(numberOfBases);
 
 							atBatNumbersList.add(numberOfAtBasesAsFloat);
@@ -98,6 +102,8 @@ public class BattingStatisticsExplorer
 			System.out.println("You made an error. Please try again");
 		
 			}//make sure error in catch actually matches what is happening
+			//I tried to throw and catch seperate errors for batting average and slugging % I ended up isolating my variables. It was a huge mess.
+			//Therefore I made one try loop for the program and threw one message for negative integers, numbers that were not 0-4 for bases, and letters.
 		}		
 	}
 }
